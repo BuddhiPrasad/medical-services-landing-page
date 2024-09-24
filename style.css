@@ -1,0 +1,135 @@
+.hero-h1 {
+  margin-bottom: 1rem;
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #00e499;
+  width: 400px;
+}
+
+.hero-p {
+  margin-bottom: 2rem;
+  width: 550px;
+}
+
+.btn-green {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-radius: 1rem;
+  color: #ffffff;
+  background: #01d48f;
+}
+
+.btn-bark-green {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-radius: 1rem;
+  color: #ffffff;
+  background: #00593d;
+}
+
+.btn-white-b {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-radius: 1rem;
+  border-width: 1px;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.common-h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 600;
+  color: #00593d;
+}
+
+.common-h3-bold {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+.appointment-h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.appointment-form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  width: 600px;
+  background: #00e499;
+}
+
+.blog-card {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.blog-image {
+  object-fit: cover;
+  width: 100%;
+  height: 12rem;
+}
+
+.Testimonials-card {
+  display: flex;
+  padding: 2.5rem;
+  margin: 2.5rem;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  border-bottom-width: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.Testimonials-image {
+  margin-right: 1rem;
+  border-radius: 9999px;
+  width: 5rem;
+  height: 5rem;
+}
+
+.Testimonials-p {
+  text-align: center;
+}
+
+.contact-p {
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #ffffff;
+}
+
+.contact-mobile {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+}
