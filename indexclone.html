@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Consultation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "custom-green": "#00ffa6",
+              "custom-dark-green": "#005738",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-custom-green flex justify-center items-center min-h-screen p-4"
+  >
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dr. Aloy Mukherjee - Medical Services</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="style.css" />
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          rel="stylesheet"
+        />
+        <script>
+          tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                  primary: "#00E499",
+                  secondary: "#006A52",
+                },
+              },
+            },
+          };
+        </script>
+      </head>
+      <body>
+        <!-- Include Online Consultation -->
+        <section class="bg-red-300">
+          <div
+            class="bg-gray-200 container mx-auto px-4 rounded-3xl shadow-lg w-full overflow-hidden"
+          >
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <!-- Left column -->
+              <div class="p-6 border-b lg:border-r border-black">
+                <div class="flex flex-col items-center mb-4">
+                  <img
+                    src="assets/Online Consultation.png"
+                    alt="Patient"
+                    class="rounded-full mb-2"
+                  />
+                  <h2 class="font-semibold text-custom-dark-green">
+                    Madhava J
+                  </h2>
+                  <p class="text-custom-dark-green font-bold">
+                    Patient Check-in
+                  </p>
+                </div>
+                <div
+                  class="flex items-center text-sm text-custom-dark-green justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 mr-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  30 mins
+                </div>
+                <div
+                  class="flex items-center text-sm text-custom-dark-green mt-2 justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 mr-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                    />
+                  </svg>
+                  Zoom
+                </div>
+              </div>
+
+              <!-- Middle column -->
+              <div class="p-6 border-b lg:border-r border-black">
+                <h3 class="font-semibold mb-4 text-custom-dark-green">
+                  Select a Date & Time
+                </h3>
+                <div
+                  class="flex justify-between items-center mb-4 text-custom-dark-green"
+                >
+                  <button class="text-2xl">&lt;</button>
+                  <span class="font-semibold">July 2004</span>
+                  <button class="text-2xl">&gt;</button>
+                </div>
+                <div class="grid grid-cols-7 gap-2 mb-4 text-custom-dark-green">
+                  <div class="text-center font-semibold">Sun</div>
+                  <div class="text-center font-semibold">Mon</div>
+                  <div class="text-center font-semibold">Tue</div>
+                  <div class="text-center font-semibold">Wed</div>
+                  <div class="text-center font-semibold">Thu</div>
+                  <div class="text-center font-semibold">Fri</div>
+                  <div class="text-center font-semibold">Sat</div>
+                  <!-- Calendar days -->
+                  <div></div>
+                  <div class="text-center p-2 rounded-full bg-white">01</div>
+                  <div class="text-center p-2 rounded-full bg-white">02</div>
+                  <div class="text-center p-2 rounded-full bg-white">03</div>
+                  <div class="text-center p-2 rounded-full bg-white">04</div>
+                  <div class="text-center p-2 rounded-full bg-white">05</div>
+                  <div class="text-center p-2 rounded-full bg-white">06</div>
+                  <div class="text-center p-2">07</div>
+                  <div class="text-center p-2 rounded-full bg-white">08</div>
+                  <div class="text-center p-2 rounded-full bg-white">09</div>
+                  <div class="text-center p-2 rounded-full bg-white">10</div>
+                  <div class="text-center p-2 rounded-full bg-white">11</div>
+                  <div class="text-center p-2 rounded-full bg-white">12</div>
+                  <div class="text-center p-2 rounded-full bg-white">13</div>
+                  <div class="text-center p-2">14</div>
+                  <div class="text-center p-2 rounded-full bg-white">15</div>
+                  <div class="text-center p-2 rounded-full bg-white">16</div>
+                  <div class="text-center p-2 rounded-full bg-white">17</div>
+                  <div class="text-center p-2 rounded-full bg-white">18</div>
+                  <div class="text-center p-2 rounded-full bg-white">19</div>
+                  <div class="text-center p-2 rounded-full bg-white">20</div>
+                  <div class="text-center p-2">21</div>
+                  <div class="text-center p-2 rounded-full bg-white">22</div>
+                  <div class="text-center p-2 rounded-full bg-white">23</div>
+                  <div class="text-center p-2 rounded-full bg-white">24</div>
+                  <div class="text-center p-2 rounded-full bg-white">25</div>
+                  <div class="text-center p-2 rounded-full bg-white">26</div>
+                  <div class="text-center p-2 rounded-full bg-white">27</div>
+                  <div class="text-center p-2">28</div>
+                  <div class="text-center p-2 rounded-full bg-white">29</div>
+                  <div class="text-center p-2 rounded-full bg-white">30</div>
+                  <div class="text-center p-2 rounded-full bg-white">31</div>
+                </div>
+              </div>
+
+              <!-- Right column -->
+              <div class="p-6">
+                <h4 class="font-semibold mb-4 text-custom-dark-green">
+                  Monday, Jul 22
+                </h4>
+                <div class="space-y-4">
+                  <button
+                    class="w-full py-2 px-4 bg-white text-custom-dark-green rounded-lg"
+                  >
+                    09:00 am
+                  </button>
+                  <div class="flex gap-4">
+                    <button
+                      class="w-full py-2 px-4 bg-custom-dark-green text-white rounded-lg"
+                    >
+                      11:00 am
+                    </button>
+                    <button
+                      class="w-full py-2 px-4 bg-custom-dark-green text-white rounded-lg"
+                    >
+                      Confirm
+                    </button>
+                  </div>
+
+                  <button
+                    class="w-full py-2 px-4 bg-white text-custom-dark-green rounded-lg"
+                  >
+                    01:00 pm
+                  </button>
+                  <button
+                    class="w-full py-2 px-4 bg-white text-custom-dark-green rounded-lg"
+                  >
+                    03:00 pm
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <script>
+          // JavaScript to toggle the mobile menu
+          const mobileMenuButton =
+            document.getElementById("mobile-menu-button");
+          const closeMenuButton = document.getElementById("close-menu-button");
+          const mobileMenu = document.getElementById("mobile-menu");
+
+          mobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.remove("translate-x-full");
+          });
+
+          closeMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.add("translate-x-full");
+          });
+        </script>
+
+        <script>
+          const images = document.querySelectorAll(".slider-image");
+          const prevBtn = document.getElementById("prev-btn");
+          const nextBtn = document.getElementById("next-btn");
+          let currentIndex = 0;
+
+          function showImage(index) {
+            images.forEach((img, i) => {
+              if (i === index) {
+                img.classList.remove("hidden");
+              } else {
+                img.classList.add("hidden");
+              }
+            });
+          }
+
+          function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+          }
+
+          function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+          }
+
+          nextBtn.addEventListener("click", nextImage);
+          prevBtn.addEventListener("click", prevImage);
+
+          // Optional: Auto-slide every 5 seconds
+          setInterval(nextImage, 5000);
+        </script>
+
+        <script>
+          const services = [
+            {
+              title: "Gastric Bypass Surgery",
+              images: "assets/Gastric Bypass Surgery.png",
+              description:
+                "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+            },
+            {
+              title: "Endoscopic Anorectal Surgery",
+              images: "assets/Endoscopic Anorectal Surgery.png",
+              description:
+                "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+            },
+            {
+              title: "Varicocelectomy Surgery",
+              images: "assets/Varicocelectomy Surgery.png",
+              description:
+                "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+            },
+            {
+              title: "Appendix Surgery",
+              images: "assets/Appendix Surgery.png",
+              description:
+                "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+            },
+            {
+              title: "Gallbladder Stone Surgery",
+              images: "assets/Gallbladder Stone Surgery.png",
+              description:
+                "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+            },
+            {
+              title: "Varicocelectomy Surgery",
+              images: "assets/Varicocelectomy Surgery.png",
+              description:
+                "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+            },
+            {
+              title: "Appendix Surgery",
+              images: "assets/Appendix Surgery.png",
+              description:
+                "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+            },
+            {
+              title: "Gallbladder Stone Surgery",
+              images: "assets/Gallbladder Stone Surgery.png",
+              description:
+                "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+            },
+            {
+              title: "Gallbladder Stone Surgery",
+              images: "assets/Gallbladder Stone Surgery.png",
+              description:
+                "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+            },
+            {
+              title: "Gallbladder Stone Surgery",
+              images: "assets/Gallbladder Stone Surgery.png",
+              description:
+                "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+            },
+          ];
+
+          const slide = document.getElementById("slide");
+          const dotContainer = document.getElementById("dotContainer");
+          let currentSet = 0;
+
+          function createCard(service) {
+            return `
+              <div class="bg-white rounded-2xl border border-b p-5 mb-5">
+                <div class="flex justify-center mb-3">
+                  <img src="${service.images}" alt="Appendix Surgery" />
+                </div>
+                <h3 class="text-center mb-3 text-[#333] font-semibold">${service.title}</h3>
+                <p class="text-center text-primary font-semibold">${service.description}</p>
+              </div>    
+              `;
+          }
+
+          function updateSlide() {
+            const startIndex = currentSet * 5;
+            const endIndex = startIndex + 5;
+            const visibleServices = services.slice(startIndex, endIndex);
+            slide.innerHTML = visibleServices.map(createCard).join("");
+            updateDots();
+          }
+
+          function updateDots() {
+            dotContainer.innerHTML = "";
+            const totalDots = Math.ceil(services.length / 5);
+            for (let i = 0; i < totalDots; i++) {
+              const dot = document.createElement("button");
+              dot.className = `w-3 h-3 rounded-full mx-1 ${
+                i === currentSet ? "bg-green-600" : "bg-green-200"
+              }`;
+              dot.setAttribute("aria-label", `Show set ${i + 1} of cards`);
+              dot.addEventListener("click", () => {
+                currentSet = i;
+                updateSlide();
+              });
+              dotContainer.appendChild(dot);
+            }
+          }
+
+          updateSlide();
+        </script>
+
+        <script>
+          const blogPosts = [
+            { image: "assets/blog1.png", title: "Medical Image 1" },
+            { image: "assets/blog2.png", title: "Medical Image 2" },
+            { image: "assets/blog3.png", title: "Medical Image 3" },
+            { image: "assets/blog4.png", title: "Medical Image 4" },
+            { image: "assets/blog4.png", title: "Medical Image 5" },
+            { image: "assets/blog3.png", title: "Medical Image 6" },
+            { image: "assets/blog2.png", title: "Medical Image 7" },
+            { image: "assets/blog1.png", title: "Medical Image 8" },
+          ];
+
+          const slideblog = document.getElementById("slideblog");
+          const dotContainerblog = document.getElementById("dotContainerblog");
+          let currentSetBlog = 0;
+
+          function createCard(post) {
+            return `
+                <div class="w-[300px] h-[300px] rounded-2xl">
+                    <img src="${post.image}" alt="${post.title}" />
+                </div>
+                
+            `;
+          }
+
+          function updateSlideblog() {
+            const startIndex = currentSetBlog * 4;
+            const endIndex = startIndex + 4;
+            const visiblePosts = blogPosts.slice(startIndex, endIndex);
+            slideblog.innerHTML = visiblePosts.map(createCard).join("");
+            updateDots();
+          }
+
+          function updateDots() {
+            dotContainerblog.innerHTML = "";
+            const totalDots = Math.ceil(blogPosts.length / 4);
+            for (let i = 0; i < totalDots; i++) {
+              const dot = document.createElement("button");
+              dot.className = `w-3 h-3 rounded-full mx-1 ${
+                i === currentSetBlog ? "bg-green-600" : "bg-green-200"
+              }`;
+              dot.setAttribute("aria-label", `Show set ${i + 1} of blog posts`);
+              dot.addEventListener("click", () => {
+                currentSetBlog = i;
+                updateSlideblog();
+              });
+              dotContainerblog.appendChild(dot);
+            }
+          }
+
+          updateSlideblog();
+        </script>
+      </body>
+    </html>
+  </body>
+</html>
