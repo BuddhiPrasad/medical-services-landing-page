@@ -771,41 +771,59 @@
     <!-- Solutions to Complex Medical Problems -->
     <section class="pt-8 pb-8">
       <div
-        class="container mx-auto px-4 flex flex-col lg:flex-row items-center"
+        class="container mx-auto flex flex-col md:flex-row items-center justify-between h-screen px-4 md:px-16 py-20"
       >
-        <div class="w-full lg:w-1/2 pr-0 lg:pr-12 mb-8 lg:mb-0">
-          <!-- ... existing content ... -->
-          <h2 class="text-primary font-semibold">Highest Quality Care</h2>
-          <h2 class="text-4xl lg:text-5xl font-semibold mb-6 text-[#00593d]">
+        <!-- Left Text Content -->
+        <div class="md:w-1/2 md:mb-0 p-4">
+          <p class="text-primary font-semibold">Highest Quality Care</p>
+          <h1 class="text-4xl lg:text-5xl font-semibold mb-6 text-[#00593d]">
             Solutions to Complex Medical Problems
-          </h2>
-          <div class="space-y-2 w-full">
-            <!-- ... existing content ... -->
-            <div class="pb-3 flex gap-4">
-              <div>•</div>
-              An magnis nulla dolor at sapien augue erat iaculis purus tempor
-              magna ipsum and vitae a purus primis ipsum magna ipsum
-            </div>
+          </h1>
+          <div class="pb-3 flex gap-4">
+            <div>•</div>
+            An magnis nulla dolor at sapien augue erat iaculis purus tempor
+            magna ipsum and vitae a purus primis ipsum magna ipsum
+          </div>
 
-            <div class="pb-3 flex gap-4">
-              <div>•</div>
-              An magnis nulla dolor at sapien augue erat iaculis purus tempor
-              magna ipsum and vitae a purus primis ipsum magna ipsum
-            </div>
+          <div class="pb-3 flex gap-4">
+            <div>•</div>
+            An magnis nulla dolor at sapien augue erat iaculis purus tempor
+            magna ipsum and vitae a purus primis ipsum magna ipsum
+          </div>
 
-            <div class="pb-3 flex gap-4">
-              <div>•</div>
-              An magnis nulla dolor at sapien augue erat iaculis purus tempor
-              magna ipsum and vitae a purus primis ipsum magna ipsum
-            </div>
+          <div class="pb-3 flex gap-4">
+            <div>•</div>
+            An magnis nulla dolor at sapien augue erat iaculis purus tempor
+            magna ipsum and vitae a purus primis ipsum magna ipsum
           </div>
         </div>
-        <div class="w-full lg:w-1/2 p-2">
+
+        <!-- Right Image and Play Button -->
+        <div class="relative w-full md:w-1/2">
           <img
             src="assets/Solutions to Complex.png"
-            alt="Medical Team"
-            class="rounded-lg shadow-lg w-full"
+            alt="Medical Image"
+            class="w-full h-auto rounded-lg shadow-lg"
           />
+          <!-- Play Button -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <button
+              class="bg-green-500 text-white rounded-full p-6 md:p-8 focus:outline-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-10 md:h-12 md:w-12"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 14.707a1 1 0 010-1.414L9.586 10 4.293 5.293a1 1 0 011.414-1.414l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>
