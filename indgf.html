@@ -592,3 +592,401 @@ section class="mb-24">
       </svg>
       Zoom
     </div>
+
+
+
+
+
+
+
+
+
+
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Medical Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-green-50">
+    <div class="container mx-auto px-4 py-6 sm:py-8">
+      <h1
+        class="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-green-800 mb-3 sm:mb-4"
+      >
+        Our Medical Services
+      </h1>
+      <p
+        class="text-center text-green-500 mb-8 sm:mb-12 max-w-xl sm:max-w-2xl mx-auto text-sm sm:text-base"
+      >
+        Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis
+        libero at tempus, blandit posuere ligula varius congue cursus porta
+        feugiat
+      </p>
+
+      <div id="carousel" class="relative overflow-hidden">
+        <div
+          id="slide"
+          class="flex flex-wrap sm:flex-nowrap gap-5 transition-transform duration-300 ease-in-out"
+        >
+          <!-- Cards will be dynamically inserted here -->
+        </div>
+      </div>
+
+      <div id="dotContainer" class="flex justify-center mt-6 sm:mt-8">
+        <!-- Dots will be dynamically inserted here -->
+      </div>
+    </div>
+
+    <script>
+      const services = [
+        {
+          title: "Gastric Bypass Surgery",
+          images: "assets/Gastric Bypass Surgery.png",
+          description:
+            "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+        },
+        {
+          title: "Endoscopic Anorectal Surgery",
+          images: "assets/Endoscopic Anorectal Surgery.png",
+          description:
+            "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+        },
+        {
+          title: "Varicocelectomy Surgery",
+          images: "assets/Varicocelectomy Surgery.png",
+          description:
+            "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+        },
+        {
+          title: "Appendix Surgery",
+          images: "assets/Appendix Surgery.png",
+          description:
+            "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+        },
+        {
+          title: "Gallbladder Stone Surgery",
+          images: "assets/Gallbladder Stone Surgery.png",
+          description:
+            "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+        },
+        {
+          title: "Varicocelectomy Surgery",
+          images: "assets/Varicocelectomy Surgery.png",
+          description:
+            "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+        },
+        {
+          title: "Appendix Surgery",
+          images: "assets/Appendix Surgery.png",
+          description:
+            "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+        },
+        {
+          title: "Gallbladder Stone Surgery",
+          images: "assets/Gallbladder Stone Surgery.png",
+          description:
+            "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+        },
+        {
+          title: "Gallbladder Stone Surgery",
+          images: "assets/Gallbladder Stone Surgery.png",
+          description:
+            "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+        },
+        {
+          title: "Gallbladder Stone Surgery",
+          images: "assets/Gallbladder Stone Surgery.png",
+          description:
+            "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+        },
+      ];
+
+      const slide = document.getElementById("slide");
+      const dotContainer = document.getElementById("dotContainer");
+      let currentSet = 0;
+
+      function createCard(service) {
+        return `
+        <div class="w-full sm:w-1/3 lg:w-1/5 bg-white rounded-2xl border border-b p-5">
+              <div class="flex justify-center mb-3">
+                <img src="${service.images}" alt="${service.title}" class="w-full h-auto"/>
+              </div>
+              <h3 class="text-center mb-3 text-[#333] font-semibold">${service.title}</h3>
+              <p class="text-center text-primary text-sm font-semibold">${service.description}</p>
+            </div>
+        `;
+      }
+
+      function getCardsPerSet() {
+        if (window.innerWidth >= 1024) {
+          return 5; // Desktop
+        } else if (window.innerWidth >= 640) {
+          return 3; // Tablet
+        } else {
+          return 1; // Mobile
+        }
+      }
+
+      function updateSlide() {
+        const cardsPerSet = getCardsPerSet();
+        const startIndex = currentSet * cardsPerSet;
+        const endIndex = startIndex + cardsPerSet;
+        const visibleServices = services.slice(startIndex, endIndex);
+        slide.innerHTML = visibleServices.map(createCard).join("");
+        updateDots(cardsPerSet);
+      }
+
+      function updateDots(cardsPerSet) {
+        dotContainer.innerHTML = "";
+        const totalDots = Math.ceil(services.length / cardsPerSet);
+        for (let i = 0; i < totalDots; i++) {
+          const dot = document.createElement("button");
+          dot.className = `w-2 h-2 sm:w-3 sm:h-3 rounded-full mx-1 ${
+            i === currentSet ? "bg-green-600" : "bg-green-200"
+          }`;
+          dot.setAttribute("aria-label", `Show set ${i + 1} of cards`);
+          dot.addEventListener("click", () => {
+            currentSet = i;
+            updateSlide();
+          });
+          dotContainer.appendChild(dot);
+        }
+      }
+
+      updateSlide();
+
+      // Add swipe functionality for mobile devices
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      slide.addEventListener(
+        "touchstart",
+        (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+        },
+        false
+      );
+
+      slide.addEventListener(
+        "touchend",
+        (e) => {
+          touchEndX = e.changedTouches[0].screenX;
+          handleSwipe();
+        },
+        false
+      );
+
+      function handleSwipe() {
+        const cardsPerSet = getCardsPerSet();
+        if (
+          touchEndX < touchStartX &&
+          currentSet < Math.ceil(services.length / cardsPerSet) - 1
+        ) {
+          // Swipe left
+          currentSet++;
+          updateSlide();
+        } else if (touchEndX > touchStartX && currentSet > 0) {
+          // Swipe right
+          currentSet--;
+          updateSlide();
+        }
+      }
+
+      // Add resize listener to update layout on screen size changes
+      window.addEventListener('resize', updateSlide);
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Medical Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-green-50">
+    <div class="container mx-auto px-4 py-6 sm:py-8">
+      <h1
+        class="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-green-800 mb-3 sm:mb-4"
+      >
+        Our Medical Services
+      </h1>
+      <p
+        class="text-center text-green-500 mb-8 sm:mb-12 max-w-xl sm:max-w-2xl mx-auto text-sm sm:text-base"
+      >
+        Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis
+        libero at tempus, blandit posuere ligula varius congue cursus porta
+        feugiat
+      </p>
+
+      <div id="carousel" class="relative overflow-hidden">
+        <div
+          id="slide"
+          class="flex flex-wrap sm:flex-nowrap gap-5 transition-transform duration-300 ease-in-out"
+        >
+          <!-- Cards will be dynamically inserted here -->
+        </div>
+      </div>
+
+      <div id="dotContainer" class="flex justify-center mt-6 sm:mt-8">
+        <!-- Dots will be dynamically inserted here -->
+      </div>
+    </div>
+
+    <script>
+      const services = [
+        {
+          title: "Gastric Bypass Surgery",
+          images: "assets/Gastric Bypass Surgery.png",
+          description:
+            "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+        },
+        {
+          title: "Endoscopic Anorectal Surgery",
+          images: "assets/Endoscopic Anorectal Surgery.png",
+          description:
+            "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+        },
+        {
+          title: "Varicocelectomy Surgery",
+          images: "assets/Varicocelectomy Surgery.png",
+          description:
+            "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+        },
+        {
+          title: "Appendix Surgery",
+          images: "assets/Appendix Surgery.png",
+          description:
+            "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+        },
+        {
+          title: "Gallbladder Stone Surgery",
+          images: "assets/Gallbladder Stone Surgery.png",
+          description:
+            "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+        },
+        {
+          title: "Varicocelectomy Surgery",
+          images: "assets/Varicocelectomy Surgery.png",
+          description:
+            "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+        },
+        {
+          title: "Appendix Surgery",
+          images: "assets/Appendix Surgery.png",
+          description:
+            "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+        },
+        {
+          title: "Gallbladder Stone Surgery",
+          images: "assets/Gallbladder Stone Surgery.png",
+          description:
+            "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+        },
+        {
+          title: "Gallbladder Stone Surgery",
+          images: "assets/Gallbladder Stone Surgery.png",
+          description:
+            "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+        },
+        {
+          title: "Gallbladder Stone Surgery",
+          images: "assets/Gallbladder Stone Surgery.png",
+          description:
+            "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
+        },
+      ];
+
+      const slide = document.getElementById("slide");
+      const dotContainer = document.getElementById("dotContainer");
+      let currentSet = 0;
+
+      function createCard(service) {
+        return `
+        <div class="bg-white rounded-2xl border border-b p-5">
+              <div class="flex justify-center mb-3">
+                <img src="${service.images}" alt="Appendix Surgery" />
+              </div>
+              <h3 class="text-center mb-3 text-[#333] font-semibold">${service.title}</h3>
+              <p class="text-center text-primary font-semibold">${service.description}</p>
+            </div>
+                
+            `;
+      }
+
+      function updateSlide() {
+        const startIndex = currentSet * 5;
+        const endIndex = startIndex + 5;
+        const visibleServices = services.slice(startIndex, endIndex);
+        slide.innerHTML = visibleServices.map(createCard).join("");
+        updateDots();
+      }
+
+      function updateDots() {
+        dotContainer.innerHTML = "";
+        const totalDots = Math.ceil(services.length / 5);
+        for (let i = 0; i < totalDots; i++) {
+          const dot = document.createElement("button");
+          dot.className = `w-2 h-2 sm:w-3 sm:h-3 rounded-full mx-1 ${
+            i === currentSet ? "bg-green-600" : "bg-green-200"
+          }`;
+          dot.setAttribute("aria-label", `Show set ${i + 1} of cards`);
+          dot.addEventListener("click", () => {
+            currentSet = i;
+            updateSlide();
+          });
+          dotContainer.appendChild(dot);
+        }
+      }
+
+      updateSlide();
+
+      // Add swipe functionality for mobile devices
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      slide.addEventListener(
+        "touchstart",
+        (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+        },
+        false
+      );
+
+      slide.addEventListener(
+        "touchend",
+        (e) => {
+          touchEndX = e.changedTouches[0].screenX;
+          handleSwipe();
+        },
+        false
+      );
+
+      function handleSwipe() {
+        if (
+          touchEndX < touchStartX &&
+          currentSet < Math.ceil(services.length / 5) - 1
+        ) {
+          // Swipe left
+          currentSet++;
+          updateSlide();
+        } else if (touchEndX > touchStartX && currentSet > 0) {
+          // Swipe right
+          currentSet--;
+          updateSlide();
+        }
+      }
+    </script>
+  </body>
+</html>

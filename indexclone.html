@@ -3,417 +3,350 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Consultation</title>
+    <title>Medical Services, Blog, and Testimonials</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "custom-green": "#00ffa6",
-              "custom-dark-green": "#005738",
-            },
-          },
-        },
-      };
-    </script>
   </head>
-  <body
-    class="bg-custom-green flex justify-center items-center min-h-screen p-4"
-  >
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Dr. Aloy Mukherjee - Medical Services</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="style.css" />
-        <link
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-          rel="stylesheet"
-        />
-        <script>
-          tailwind.config = {
-            theme: {
-              extend: {
-                colors: {
-                  primary: "#00E499",
-                  secondary: "#006A52",
-                },
-              },
-            },
-          };
-        </script>
-      </head>
-      <body>
-        <!-- Include Online Consultation -->
-        <section class="bg-red-300">
+  <body class="bg-green-50">
+    <!-- Medical Services Section -->
+    <section class="pt-8 pb-8">
+      <div class="container mx-auto px-4 py-6 sm:py-8">
+        <h1
+          class="text-4xl lg:text-5xl font-semibold mb-6 text-[#00593d] text-center"
+        >
+          Our Medical Services
+        </h1>
+        <p class="text-center mb-8 sm:mb-12 max-w-xl sm:max-w-2xl mx-auto">
+          Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis
+          libero at tempus, blandit posuere ligula varius congue cursus porta
+          feugiat
+        </p>
+
+        <div id="carousel" class="relative overflow-hidden">
           <div
-            class="bg-gray-200 container mx-auto px-4 rounded-3xl shadow-lg w-full overflow-hidden"
+            id="slideServicesN"
+            class="flex flex-wrap sm:flex-nowrap gap-5 transition-transform duration-300 ease-in-out"
           >
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <!-- Left column -->
-              <div class="p-6 border-b lg:border-r border-black">
-                <div class="flex flex-col items-center mb-4">
-                  <img
-                    src="assets/Online Consultation.png"
-                    alt="Patient"
-                    class="rounded-full mb-2"
-                  />
-                  <h2 class="font-semibold text-custom-dark-green">
-                    Madhava J
-                  </h2>
-                  <p class="text-custom-dark-green font-bold">
-                    Patient Check-in
-                  </p>
-                </div>
-                <div
-                  class="flex items-center text-sm text-custom-dark-green justify-center"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 mr-2"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                  30 mins
-                </div>
-                <div
-                  class="flex items-center text-sm text-custom-dark-green mt-2 justify-center"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 mr-2"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-                    />
-                  </svg>
-                  Zoom
-                </div>
-              </div>
-
-              <!-- Middle column -->
-              <div class="p-6 border-b lg:border-r border-black">
-                <h3 class="font-semibold mb-4 text-custom-dark-green">
-                  Select a Date & Time
-                </h3>
-                <div
-                  class="flex justify-between items-center mb-4 text-custom-dark-green"
-                >
-                  <button class="text-2xl">&lt;</button>
-                  <span class="font-semibold">July 2004</span>
-                  <button class="text-2xl">&gt;</button>
-                </div>
-                <div class="grid grid-cols-7 gap-2 mb-4 text-custom-dark-green">
-                  <div class="text-center font-semibold">Sun</div>
-                  <div class="text-center font-semibold">Mon</div>
-                  <div class="text-center font-semibold">Tue</div>
-                  <div class="text-center font-semibold">Wed</div>
-                  <div class="text-center font-semibold">Thu</div>
-                  <div class="text-center font-semibold">Fri</div>
-                  <div class="text-center font-semibold">Sat</div>
-                  <!-- Calendar days -->
-                  <div></div>
-                  <div class="text-center p-2 rounded-full bg-white">01</div>
-                  <div class="text-center p-2 rounded-full bg-white">02</div>
-                  <div class="text-center p-2 rounded-full bg-white">03</div>
-                  <div class="text-center p-2 rounded-full bg-white">04</div>
-                  <div class="text-center p-2 rounded-full bg-white">05</div>
-                  <div class="text-center p-2 rounded-full bg-white">06</div>
-                  <div class="text-center p-2">07</div>
-                  <div class="text-center p-2 rounded-full bg-white">08</div>
-                  <div class="text-center p-2 rounded-full bg-white">09</div>
-                  <div class="text-center p-2 rounded-full bg-white">10</div>
-                  <div class="text-center p-2 rounded-full bg-white">11</div>
-                  <div class="text-center p-2 rounded-full bg-white">12</div>
-                  <div class="text-center p-2 rounded-full bg-white">13</div>
-                  <div class="text-center p-2">14</div>
-                  <div class="text-center p-2 rounded-full bg-white">15</div>
-                  <div class="text-center p-2 rounded-full bg-white">16</div>
-                  <div class="text-center p-2 rounded-full bg-white">17</div>
-                  <div class="text-center p-2 rounded-full bg-white">18</div>
-                  <div class="text-center p-2 rounded-full bg-white">19</div>
-                  <div class="text-center p-2 rounded-full bg-white">20</div>
-                  <div class="text-center p-2">21</div>
-                  <div class="text-center p-2 rounded-full bg-white">22</div>
-                  <div class="text-center p-2 rounded-full bg-white">23</div>
-                  <div class="text-center p-2 rounded-full bg-white">24</div>
-                  <div class="text-center p-2 rounded-full bg-white">25</div>
-                  <div class="text-center p-2 rounded-full bg-white">26</div>
-                  <div class="text-center p-2 rounded-full bg-white">27</div>
-                  <div class="text-center p-2">28</div>
-                  <div class="text-center p-2 rounded-full bg-white">29</div>
-                  <div class="text-center p-2 rounded-full bg-white">30</div>
-                  <div class="text-center p-2 rounded-full bg-white">31</div>
-                </div>
-              </div>
-
-              <!-- Right column -->
-              <div class="p-6">
-                <h4 class="font-semibold mb-4 text-custom-dark-green">
-                  Monday, Jul 22
-                </h4>
-                <div class="space-y-4">
-                  <button
-                    class="w-full py-2 px-4 bg-white text-custom-dark-green rounded-lg"
-                  >
-                    09:00 am
-                  </button>
-                  <div class="flex gap-4">
-                    <button
-                      class="w-full py-2 px-4 bg-custom-dark-green text-white rounded-lg"
-                    >
-                      11:00 am
-                    </button>
-                    <button
-                      class="w-full py-2 px-4 bg-custom-dark-green text-white rounded-lg"
-                    >
-                      Confirm
-                    </button>
-                  </div>
-
-                  <button
-                    class="w-full py-2 px-4 bg-white text-custom-dark-green rounded-lg"
-                  >
-                    01:00 pm
-                  </button>
-                  <button
-                    class="w-full py-2 px-4 bg-white text-custom-dark-green rounded-lg"
-                  >
-                    03:00 pm
-                  </button>
-                </div>
-              </div>
-            </div>
+            <!-- Cards will be dynamically inserted here -->
           </div>
-        </section>
+        </div>
 
-        <script>
-          // JavaScript to toggle the mobile menu
-          const mobileMenuButton =
-            document.getElementById("mobile-menu-button");
-          const closeMenuButton = document.getElementById("close-menu-button");
-          const mobileMenu = document.getElementById("mobile-menu");
+        <div
+          id="dotContainerServicesN"
+          class="flex justify-center mt-6 sm:mt-8"
+        >
+          <!-- Dots will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
 
-          mobileMenuButton.addEventListener("click", () => {
-            mobileMenu.classList.remove("translate-x-full");
-          });
+    <!-- Blog Section -->
+    <section class="pt-8 pb-8">
+      <div class="container mx-auto">
+        <div class="flex items-center mb-6 sm:mb-8">
+          <div class="w-16 h-4 bg-green-400 mr-4 rounded-r-lg"></div>
+          <h1 class="text-4xl lg:text-5xl font-semibold mb-6 text-[#00593d]">
+            Blog's
+          </h1>
+        </div>
 
-          closeMenuButton.addEventListener("click", () => {
-            mobileMenu.classList.add("translate-x-full");
-          });
-        </script>
+        <div
+          id="carousel"
+          class="relative overflow-hidden pr-4 pl-4 lg:pr-32 lg:pl-32"
+        >
+          <div
+            id="slideBlogN"
+            class="flex flex-wrap transition-transform duration-300 ease-in-out"
+          >
+            <!-- Cards will be dynamically inserted here -->
+          </div>
+        </div>
 
-        <script>
-          const images = document.querySelectorAll(".slider-image");
-          const prevBtn = document.getElementById("prev-btn");
-          const nextBtn = document.getElementById("next-btn");
-          let currentIndex = 0;
+        <div id="dotContainerBlogN" class="flex justify-center mt-6 sm:mt-8">
+          <!-- Dots will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
 
-          function showImage(index) {
-            images.forEach((img, i) => {
-              if (i === index) {
-                img.classList.remove("hidden");
-              } else {
-                img.classList.add("hidden");
-              }
-            });
-          }
+    <!-- Testimonials Section -->
+    <section class="pt-8 pb-8">
+      <div class="container mx-auto px-4 py-16">
+        <h2 class="text-4xl font-bold text-green-800 mb-12">
+          <span class="inline-block w-12 h-2 bg-green-400 mr-2"></span
+          >Testimonials
+        </h2>
 
-          function nextImage() {
-            currentIndex = (currentIndex + 1) % images.length;
-            showImage(currentIndex);
-          }
+        <div
+          id="testimonials-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pl-8 pr-8 lg:pl-32 lg:pr-32"
+        >
+          <!-- Testimonials will be dynamically inserted here -->
+        </div>
 
-          function prevImage() {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            showImage(currentIndex);
-          }
+        <div id="dots-container" class="flex justify-center mt-8">
+          <!-- Dots will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
 
-          nextBtn.addEventListener("click", nextImage);
-          prevBtn.addEventListener("click", prevImage);
+    <script>
+      // Services Script
+      const services = [
+        // ... (services data)
+      ];
 
-          // Optional: Auto-slide every 5 seconds
-          setInterval(nextImage, 5000);
-        </script>
+      const slideServicesN = document.getElementById("slideServicesN");
+      const dotContainerServicesN = document.getElementById(
+        "dotContainerServicesN"
+      );
+      let currentSetServicesN = 0;
 
-        <script>
-          const services = [
-            {
-              title: "Gastric Bypass Surgery",
-              images: "assets/Gastric Bypass Surgery.png",
-              description:
-                "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
-            },
-            {
-              title: "Endoscopic Anorectal Surgery",
-              images: "assets/Endoscopic Anorectal Surgery.png",
-              description:
-                "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
-            },
-            {
-              title: "Varicocelectomy Surgery",
-              images: "assets/Varicocelectomy Surgery.png",
-              description:
-                "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
-            },
-            {
-              title: "Appendix Surgery",
-              images: "assets/Appendix Surgery.png",
-              description:
-                "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
-            },
-            {
-              title: "Gallbladder Stone Surgery",
-              images: "assets/Gallbladder Stone Surgery.png",
-              description:
-                "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
-            },
-            {
-              title: "Varicocelectomy Surgery",
-              images: "assets/Varicocelectomy Surgery.png",
-              description:
-                "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
-            },
-            {
-              title: "Appendix Surgery",
-              images: "assets/Appendix Surgery.png",
-              description:
-                "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
-            },
-            {
-              title: "Gallbladder Stone Surgery",
-              images: "assets/Gallbladder Stone Surgery.png",
-              description:
-                "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
-            },
-            {
-              title: "Gallbladder Stone Surgery",
-              images: "assets/Gallbladder Stone Surgery.png",
-              description:
-                "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
-            },
-            {
-              title: "Gallbladder Stone Surgery",
-              images: "assets/Gallbladder Stone Surgery.png",
-              description:
-                "Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, blandit posuere ligula varius congue cursus porta feugiat",
-            },
-          ];
-
-          const slide = document.getElementById("slide");
-          const dotContainer = document.getElementById("dotContainer");
-          let currentSet = 0;
-
-          function createCard(service) {
-            return `
-              <div class="bg-white rounded-2xl border border-b p-5 mb-5">
-                <div class="flex justify-center mb-3">
-                  <img src="${service.images}" alt="Appendix Surgery" />
+      function createCard(service) {
+        return `
+                <div class="bg-white rounded-2xl border border-b p-5">
+                    <div class="flex justify-center mb-3">
+                        <img src="${service.images}" alt="${service.title}" />
+                    </div>
+                    <h3 class="text-center mb-3 text-[#333] font-semibold">${service.title}</h3>
+                    <p class="text-center text-primary font-semibold">${service.description}</p>
                 </div>
-                <h3 class="text-center mb-3 text-[#333] font-semibold">${service.title}</h3>
-                <p class="text-center text-primary font-semibold">${service.description}</p>
-              </div>    
-              `;
-          }
-
-          function updateSlide() {
-            const startIndex = currentSet * 5;
-            const endIndex = startIndex + 5;
-            const visibleServices = services.slice(startIndex, endIndex);
-            slide.innerHTML = visibleServices.map(createCard).join("");
-            updateDots();
-          }
-
-          function updateDots() {
-            dotContainer.innerHTML = "";
-            const totalDots = Math.ceil(services.length / 5);
-            for (let i = 0; i < totalDots; i++) {
-              const dot = document.createElement("button");
-              dot.className = `w-3 h-3 rounded-full mx-1 ${
-                i === currentSet ? "bg-green-600" : "bg-green-200"
-              }`;
-              dot.setAttribute("aria-label", `Show set ${i + 1} of cards`);
-              dot.addEventListener("click", () => {
-                currentSet = i;
-                updateSlide();
-              });
-              dotContainer.appendChild(dot);
-            }
-          }
-
-          updateSlide();
-        </script>
-
-        <script>
-          const blogPosts = [
-            { image: "assets/blog1.png", title: "Medical Image 1" },
-            { image: "assets/blog2.png", title: "Medical Image 2" },
-            { image: "assets/blog3.png", title: "Medical Image 3" },
-            { image: "assets/blog4.png", title: "Medical Image 4" },
-            { image: "assets/blog4.png", title: "Medical Image 5" },
-            { image: "assets/blog3.png", title: "Medical Image 6" },
-            { image: "assets/blog2.png", title: "Medical Image 7" },
-            { image: "assets/blog1.png", title: "Medical Image 8" },
-          ];
-
-          const slideblog = document.getElementById("slideblog");
-          const dotContainerblog = document.getElementById("dotContainerblog");
-          let currentSetBlog = 0;
-
-          function createCard(post) {
-            return `
-                <div class="w-[300px] h-[300px] rounded-2xl">
-                    <img src="${post.image}" alt="${post.title}" />
-                </div>
-                
             `;
-          }
+      }
 
-          function updateSlideblog() {
-            const startIndex = currentSetBlog * 4;
-            const endIndex = startIndex + 4;
-            const visiblePosts = blogPosts.slice(startIndex, endIndex);
-            slideblog.innerHTML = visiblePosts.map(createCard).join("");
-            updateDots();
-          }
+      function getCardsPerSet() {
+        if (window.innerWidth >= 1024) {
+          return 5; // Desktop view
+        } else if (window.innerWidth >= 640) {
+          return 3; // Tablet view
+        } else {
+          return 1; // Mobile view
+        }
+      }
 
-          function updateDots() {
-            dotContainerblog.innerHTML = "";
-            const totalDots = Math.ceil(blogPosts.length / 4);
-            for (let i = 0; i < totalDots; i++) {
-              const dot = document.createElement("button");
-              dot.className = `w-3 h-3 rounded-full mx-1 ${
-                i === currentSetBlog ? "bg-green-600" : "bg-green-200"
-              }`;
-              dot.setAttribute("aria-label", `Show set ${i + 1} of blog posts`);
-              dot.addEventListener("click", () => {
-                currentSetBlog = i;
-                updateSlideblog();
-              });
-              dotContainerblog.appendChild(dot);
-            }
-          }
+      function updateSlideServicesN() {
+        const cardsPerSet = getCardsPerSet();
+        const startIndex = currentSetServicesN * cardsPerSet;
+        const endIndex = startIndex + cardsPerSet;
+        const visibleServices = services.slice(startIndex, endIndex);
+        slideServicesN.innerHTML = visibleServices.map(createCard).join("");
+        updateDots(cardsPerSet);
+      }
 
-          updateSlideblog();
-        </script>
-      </body>
-    </html>
+      function updateDots(cardsPerSet) {
+        dotContainerServicesN.innerHTML = "";
+        const totalDots = Math.ceil(services.length / cardsPerSet);
+        for (let i = 0; i < totalDots; i++) {
+          const dot = document.createElement("button");
+          dot.className = `w-2 h-2 sm:w-3 sm:h-3 rounded-full mx-1 ${
+            i === currentSetServicesN ? "bg-green-600" : "bg-green-200"
+          }`;
+          dot.setAttribute("aria-label", `Show set ${i + 1} of cards`);
+          dot.addEventListener("click", () => {
+            currentSetServicesN = i;
+            updateSlideServicesN();
+          });
+          dotContainerServicesN.appendChild(dot);
+        }
+      }
+
+      updateSlideServicesN();
+
+      // Add swipe functionality for mobile devices
+      let touchStartXN = 0;
+      let touchEndXN = 0;
+
+      slideServicesN.addEventListener(
+        "touchstart",
+        (e) => {
+          touchStartXN = e.changedTouches[0].screenX;
+        },
+        false
+      );
+
+      slideServicesN.addEventListener(
+        "touchend",
+        (e) => {
+          touchEndXN = e.changedTouches[0].screenX;
+          handleSwipe();
+        },
+        false
+      );
+
+      function handleSwipe() {
+        const cardsPerSet = getCardsPerSet();
+        if (
+          touchEndXN < touchStartXN &&
+          currentSetServicesN < Math.ceil(services.length / cardsPerSet) - 1
+        ) {
+          // Swipe left
+          currentSetServicesN++;
+          updateSlideServicesN();
+        } else if (touchEndXN > touchStartXN && currentSetServicesN > 0) {
+          // Swipe right
+          currentSetServicesN--;
+          updateSlideServicesN();
+        }
+      }
+
+      // Add resize listener to update layout on screen size changes
+      window.addEventListener("resize", updateSlideServicesN);
+
+      // Blog Script
+      const blogPosts = [
+        // ... (blog posts data)
+      ];
+
+      const slideBlogN = document.getElementById("slideBlogN");
+      const dotContainerBlogN = document.getElementById("dotContainerBlogN");
+      let currentSetBlogN = 0;
+
+      function createBlogCard(post) {
+        return `
+                <div class="w-1/2 sm:w-1/2 md:w-1/4 px-2 sm:px-4 mb-4 sm:mb-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="${post.image}" alt="Blog post" class="w-full h-32 sm:h-40 md:h-48 object-cover">
+                    </div>
+                </div>
+            `;
+      }
+
+      function updateSlideBlogN() {
+        const startIndex = currentSetBlogN * 4;
+        const endIndex = startIndex + 4;
+        const visiblePosts = blogPosts.slice(startIndex, endIndex);
+        slideBlogN.innerHTML = visiblePosts.map(createBlogCard).join("");
+        updateBlogDots();
+      }
+
+      function updateBlogDots() {
+        dotContainerBlogN.innerHTML = "";
+        const totalDots = Math.ceil(blogPosts.length / 4);
+        for (let i = 0; i < totalDots; i++) {
+          const dot = document.createElement("button");
+          dot.className = `w-2 h-2 sm:w-3 sm:h-3 rounded-full mx-1 ${
+            i === currentSetBlogN ? "bg-green-600" : "bg-green-200"
+          }`;
+          dot.setAttribute("aria-label", `Show set ${i + 1} of blog posts`);
+          dot.addEventListener("click", () => {
+            currentSetBlogN = i;
+            updateSlideBlogN();
+          });
+          dotContainerBlogN.appendChild(dot);
+        }
+      }
+
+      updateSlideBlogN();
+
+      // Add swipe functionality for mobile devices
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      slideBlogN.addEventListener(
+        "touchstart",
+        (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+        },
+        false
+      );
+
+      slideBlogN.addEventListener(
+        "touchend",
+        (e) => {
+          touchEndX = e.changedTouches[0].screenX;
+          handleBlogSwipe();
+        },
+        false
+      );
+
+      function handleBlogSwipe() {
+        if (
+          touchEndX < touchStartX &&
+          currentSetBlogN < Math.ceil(blogPosts.length / 4) - 1
+        ) {
+          // Swipe left
+          currentSetBlogN++;
+          updateSlideBlogN();
+        } else if (touchEndX > touchStartX && currentSetBlogN > 0) {
+          // Swipe right
+          currentSetBlogN--;
+          updateSlideBlogN();
+        }
+      }
+
+      // Testimonials Script
+      const testimonials = [
+        // ... (testimonials data)
+      ];
+
+      const testimonialsPerPage = 3;
+      let currentPage = 0;
+
+      function renderTestimonials() {
+        const container = document.getElementById("testimonials-container");
+        container.innerHTML = "";
+
+        const startIndex = currentPage * testimonialsPerPage;
+        const endIndex = startIndex + testimonialsPerPage;
+
+        for (let i = startIndex; i < endIndex && i < testimonials.length; i++) {
+          const testimonial = testimonials[i];
+          const testimonialElement = document.createElement("div");
+          testimonialElement.className = "bg-white rounded-lg shadow-md p-6";
+          testimonialElement.innerHTML = `
+                    <img src="${
+                      testimonial.image
+                    }" alt="Profile" class="w-20 h-20 rounded-full mx-auto mb-4">
+                    <p class="text-gray-600 text-center mb-4">${
+                      testimonial.content
+                    }</p>
+                    <div class="flex justify-center" aria-label="Rating: ${
+                      testimonial.rating
+                    } out of 5 stars">
+                        ${Array(5)
+                          .fill()
+                          .map(
+                            (_, index) => `
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ${
+                              index < testimonial.rating
+                                ? "text-yellow-400"
+                                : "text-gray-300"
+                            }" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        `
+                          )
+                          .join("")}
+                    </div>
+                `;
+          container.appendChild(testimonialElement);
+        }
+      }
+
+      function renderDots() {
+        const container = document.getElementById("dots-container");
+        container.innerHTML = "";
+
+        const pageCount = Math.ceil(testimonials.length / testimonialsPerPage);
+
+        for (let i = 0; i < pageCount; i++) {
+          const dot = document.createElement("button");
+          dot.className = `h-3 w-3 mx-1 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 ${
+            currentPage === i ? "bg-green-800" : "bg-green-300"
+          }`;
+          dot.setAttribute("aria-label", `Go to testimonial page ${i + 1}`);
+          if (currentPage === i) {
+            dot.setAttribute("aria-current", "page");
+          }
+          dot.onclick = () => {
+            currentPage = i;
+            renderTestimonials();
+            renderDots();
+          };
+          container.appendChild(dot);
+        }
+      }
+
+      renderTestimonials();
+      renderDots();
+    </script>
   </body>
 </html>
